@@ -19,6 +19,7 @@
 		0B1DD3FC9D045EA6A464A53A648932D8 /* VKApiPhotos.h in Headers */ = {isa = PBXBuildFile; fileRef = 49EA9FB2C1A10161A10E03DBD5E5786D /* VKApiPhotos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1073020E901F6C06B0D13BA83C34E045 /* Pods-MobileUpGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA480FAAD8E884D3A9B60B4B73D48536 /* Pods-MobileUpGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		116D607B2B7227FAF2869579718C3231 /* VKUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC9A15A080BEB7F608605C816C546AF /* VKUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1248B61C26B0A6EB0081AEF7 /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E2C55AC27D81E0DC33F9E0C23A40E5E /* VKSdkResources.bundle */; };
 		12E69BD165C4BA9960151FD193BE0A19 /* VKRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8A429F9EB4C96F1DB696F3E08BE71C /* VKRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12EBB233FACE90871D44B95CB85D359E /* VKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F0ACC9888AC5D3CF7E514CC2525B77 /* VKBatchRequest.m */; };
 		160E6ACEC229DADDC3B2D2688DEB9435 /* VKCounters.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B7DBDCD01F78BF5D600616BBDF6ACB /* VKCounters.m */; };
@@ -56,7 +57,6 @@
 		5919CEF26B9DA73510A2E90687B812D9 /* VKCounters.h in Headers */ = {isa = PBXBuildFile; fileRef = DCED26494C60DED72C1785D4E0509ED6 /* VKCounters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A33A51C0B9D47F630549DE59D24B53C /* VKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F53C6A74ED249A3230E57B54DAF056 /* VKPhoto.m */; };
 		5A34165F4618C433C5F8420AB9AD9598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB2DF7A0FB94E82CC95149F398B60E3 /* Foundation.framework */; };
-		5C36A77CEC0428848107BA4B44AFE72A /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E2C55AC27D81E0DC33F9E0C23A40E5E /* VKSdkResources.bundle */; };
 		5CB5469F5B0DF27F8B921D8A065DA76B /* VKCaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D1E7145185E5F7E0E29F8FD251FAC /* VKCaptchaView.m */; };
 		5D3CC80875AA42B8E4AB0D92674D2A62 /* VKUploadPhotoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D1D007EFD7558E931C547F6BEAD9D9E /* VKUploadPhotoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DA40AC3F56FDE02D3E765582D8CF127 /* VKJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F3F1E3021BA49A25576B72E41783 /* VKJSONOperation.m */; };
@@ -702,7 +702,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C36A77CEC0428848107BA4B44AFE72A /* VKSdkResources.bundle in Resources */,
+				1248B61C26B0A6EB0081AEF7 /* VKSdkResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
