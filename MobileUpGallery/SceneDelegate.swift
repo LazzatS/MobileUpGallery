@@ -71,7 +71,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthenticationServiceDe
     
     // MARK: Authentication Service Delegate functions
     func authenticationServiceShouldShow(viewController: UIViewController) {
-        
+        window?.rootViewController?.present(viewController, animated: true, completion: nil)
     }
     
     func authenticationServiceSignIn() {
