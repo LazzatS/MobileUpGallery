@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1206BF2F26B1C4A500BB5F92 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206BF2E26B1C4A500BB5F92 /* AuthenticationService.swift */; };
+		1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */; };
 		1248B61626B0A05A0081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
 		1248B61726B0A05A0081AEF7 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1248B62026B0AB140081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
@@ -22,19 +22,19 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		1248B61826B0A05A0081AEF7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				1248B61726B0A05A0081AEF7 /* VKSdkFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1206BF2E26B1C4A500BB5F92 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
 		12B76F9E26B01CF300B3E33D /* MobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B76FA126B01CF300B3E33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +60,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1206BF2D26B1C48B00BB5F92 /* Services */ = {
+		1206BF3226B1CCBE00BB5F92 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1206BF2E26B1C4A500BB5F92 /* AuthenticationService.swift */,
+				1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -88,9 +88,9 @@
 		12B76FA026B01CF300B3E33D /* MobileUpGallery */ = {
 			isa = PBXGroup;
 			children = (
-				1206BF2D26B1C48B00BB5F92 /* Services */,
 				12B76FA126B01CF300B3E33D /* AppDelegate.swift */,
 				12B76FA326B01CF300B3E33D /* SceneDelegate.swift */,
+				1206BF3226B1CCBE00BB5F92 /* Services */,
 				12B76FAA26B01CFF00B3E33D /* Assets.xcassets */,
 				12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */,
 				12B76FAF26B01CFF00B3E33D /* Info.plist */,
@@ -206,7 +206,7 @@
 				12B76FC826B0248C00B3E33D /* LoginViewController.swift in Sources */,
 				12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */,
 				12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */,
-				1206BF2F26B1C4A500BB5F92 /* AuthenticationService.swift in Sources */,
+				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
