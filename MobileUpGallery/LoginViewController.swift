@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         
-        authenticationService = AuthenticationService()
+        authenticationService = SceneDelegate.shared().authenticationService
     }
     
     @IBAction func signInTapped(_ sender: Any) {

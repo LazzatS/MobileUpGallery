@@ -36,7 +36,7 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
             
             case .initialized:
                 print("initialized and ready to be authorized")
-//                VKSdk.authorize(scope)
+                VKSdk.authorize(scope)
             case .authorized:
                 print("authorized and should present web view to sign in")
             default:
