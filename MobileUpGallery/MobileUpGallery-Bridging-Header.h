@@ -3,4 +3,4 @@
 //
 
 //@import VK_ios_sdk;
-#import <VKSdkFramework/VKSdkFramework.h>
+//#import <VKSdkFramework/VKSdkFramework.h>
