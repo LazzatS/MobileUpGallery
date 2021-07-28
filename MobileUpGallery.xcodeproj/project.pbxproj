@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1248B61626B0A05A0081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
 		1248B61726B0A05A0081AEF7 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1248B62026B0AB140081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
 		12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA126B01CF300B3E33D /* AppDelegate.swift */; };
 		12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA326B01CF300B3E33D /* SceneDelegate.swift */; };
 		12B76FAB26B01CFF00B3E33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAA26B01CFF00B3E33D /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 			files = (
 				1248B61626B0A05A0081AEF7 /* VKSdkFramework.xcframework in Frameworks */,
 				12C6B5CB26B091EA0021AE0D /* Pods_MobileUpGallery.framework in Frameworks */,
+				1248B62026B0AB140081AEF7 /* VKSdkFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
