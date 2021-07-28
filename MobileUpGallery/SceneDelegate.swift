@@ -8,7 +8,7 @@
 import UIKit
 import VKSdkFramework
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthenticationServiceDelegate {
 
     var window: UIWindow?
     var authenticationService: AuthenticationService!
@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         authenticationService = AuthenticationService()
+        authenticationService.delegate = self
         let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: loginVC)
         window?.rootViewController = nav
@@ -61,6 +62,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    
+    // MARK: Authentication Service Delegate functions
+    func authenticationServiceShouldShow(viewController: UIViewController) {
+        
+    }
+    
+    func authenticationServiceSignIn() {
+        
+    }
+    
+    func authenticationSignInFailed() {
+        
+    }
 
 }
 
