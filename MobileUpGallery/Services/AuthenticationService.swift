@@ -39,15 +39,18 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
                 VKSdk.authorize(scope)
             case .authorized:
                 print("authorized and should present web view to sign in")
+                self.delegate?.authenticationServiceSignIn()
             default:
-                fatalError(error!.localizedDescription)
+                self.delegate?.authenticationSignInFailed()
             }
             
         }
     }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        delegate?.authenticationServiceSignIn()
+        if result.token != nil {
+            delegate?.authenticationServiceSignIn()
+        }
     }
     
     func vkSdkUserAuthorizationFailed() {

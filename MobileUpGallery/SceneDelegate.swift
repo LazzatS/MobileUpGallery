@@ -75,7 +75,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthenticationServiceDe
     }
     
     func authenticationServiceSignIn() {
-        
+        let albumVC = AlbumViewController(nibName: "AlbumViewController", bundle: nil)
+        let navVC = UINavigationController(rootViewController: albumVC)
+        window?.rootViewController = navVC
     }
     
     func authenticationSignInFailed() {

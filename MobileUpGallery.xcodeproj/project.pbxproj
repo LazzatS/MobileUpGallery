@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */; };
+		1206BF3526B20B4A00BB5F92 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206BF3326B20B4A00BB5F92 /* AlbumViewController.swift */; };
+		1206BF3626B20B4A00BB5F92 /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1206BF3426B20B4A00BB5F92 /* AlbumViewController.xib */; };
 		1248B61626B0A05A0081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
 		1248B61726B0A05A0081AEF7 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1248B62026B0AB140081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		1206BF3326B20B4A00BB5F92 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		1206BF3426B20B4A00BB5F92 /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
 		1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
 		12B76F9E26B01CF300B3E33D /* MobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B76FA126B01CF300B3E33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,24 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		1206BF3726B20C3A00BB5F92 /* AlbumViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1206BF3326B20B4A00BB5F92 /* AlbumViewController.swift */,
+				1206BF3426B20B4A00BB5F92 /* AlbumViewController.xib */,
+			);
+			path = AlbumViewController;
+			sourceTree = "<group>";
+		};
+		1206BF3826B20C6800BB5F92 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12B76FC626B0248C00B3E33D /* LoginViewController.swift */,
+				12B76FC726B0248C00B3E33D /* LoginViewController.xib */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
 		12B76F9526B01CF300B3E33D = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +112,12 @@
 			children = (
 				12B76FA126B01CF300B3E33D /* AppDelegate.swift */,
 				12B76FA326B01CF300B3E33D /* SceneDelegate.swift */,
+				1206BF3826B20C6800BB5F92 /* LoginViewController */,
+				1206BF3726B20C3A00BB5F92 /* AlbumViewController */,
 				1206BF3226B1CCBE00BB5F92 /* Services */,
 				12B76FAA26B01CFF00B3E33D /* Assets.xcassets */,
 				12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */,
 				12B76FAF26B01CFF00B3E33D /* Info.plist */,
-				12B76FC626B0248C00B3E33D /* LoginViewController.swift */,
-				12B76FC726B0248C00B3E33D /* LoginViewController.xib */,
 				12C6B5C126B08DEF0021AE0D /* MobileUpGallery-Bridging-Header.h */,
 			);
 			path = MobileUpGallery;
@@ -169,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1206BF3626B20B4A00BB5F92 /* AlbumViewController.xib in Resources */,
 				12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */,
 				12B76FAB26B01CFF00B3E33D /* Assets.xcassets in Resources */,
 				12B76FC926B0248C00B3E33D /* LoginViewController.xib in Resources */,
@@ -204,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B76FC826B0248C00B3E33D /* LoginViewController.swift in Sources */,
+				1206BF3526B20B4A00BB5F92 /* AlbumViewController.swift in Sources */,
 				12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */,
 				12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */,
 				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
