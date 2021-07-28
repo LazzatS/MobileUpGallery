@@ -31,7 +31,7 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     func wakeUpSession() {
         let scope = ["email"]
-        VKSdk.wakeUpSession(scope) { (state, error) in
+        VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
             
             case .initialized:
@@ -39,9 +39,9 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
                 VKSdk.authorize(scope)
             case .authorized:
                 print("authorized and should present web view to sign in")
-                self.delegate?.authenticationServiceSignIn()
+                delegate?.authenticationServiceSignIn()
             default:
-                self.delegate?.authenticationSignInFailed()
+                delegate?.authenticationSignInFailed()
             }
             
         }
