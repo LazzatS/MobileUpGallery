@@ -9,10 +9,19 @@ import UIKit
 
 class AlbumViewController: UIViewController {
 
-    private let networkService = NetworkService()
+    private let networkService: Networking = NetworkService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkService.getPhotos()
+        let parameters = ["filters": "post, photo"]
+        networkService.request(path: API.photos, parameters: parameters, completion: { (data, error) in
+            if let error = error {
+                print("error when receiving data: \(error)")
+            }
+            
+            guard let data = data else { return }
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            print("json: \(String(describing: json))")
+        })
     }
 }

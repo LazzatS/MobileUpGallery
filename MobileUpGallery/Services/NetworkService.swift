@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class NetworkService {
+protocol Networking {
+    func request(path: String, parameters: [String: String], completion: @escaping (Data?, Error?) -> Void)
+}
+
+final class NetworkService: Networking {
     
     private let authenticationService: AuthenticationService
     
@@ -15,17 +19,24 @@ final class NetworkService {
         self.authenticationService = authenticationService
     }
     
-    func getPhotos() {
-        
-        
+    func request(path: String, parameters: [String : String], completion: @escaping (Data?, Error?) -> Void) {
         guard let token = authenticationService.token else { return }
-        
-        let parameters = ["photo_ids":""]
         var allParameters = parameters
         allParameters["access_token"] = token
         allParameters["v"] = API.version
-        let url = self.url(from: API.photos, parameters: allParameters)
+        let url = self.url(from: path, parameters: allParameters)
+        let request = URLRequest(url: url)
+        let task = createDataTask(from: request, completion: completion)
+        task.resume()
         print(url)
+    }
+    
+    private func createDataTask(from request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
+        return URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+            DispatchQueue.main.async {
+                completion(data, error)
+            }
+        })
     }
     
     private func url(from path: String, parameters: [String: String]) -> URL {
