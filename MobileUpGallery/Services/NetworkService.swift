@@ -16,7 +16,7 @@ final class NetworkService {
     }
     
     func getPhotos() {
-        var components = URLComponents()
+        
         
         guard let token = authenticationService.token else { return }
         
@@ -24,6 +24,13 @@ final class NetworkService {
         var allParameters = parameters
         allParameters["access_token"] = token
         allParameters["v"] = API.version
+        let url = self.url(from: API.photos, parameters: allParameters)
+        print(url)
+    }
+    
+    private func url(from path: String, parameters: [String: String]) -> URL {
+        var components = URLComponents()
+        
         // ptotocol
         components.scheme = API.scheme
         // website for request
@@ -31,9 +38,8 @@ final class NetworkService {
         // needed method
         components.path = API.photos
         // arrange order of parameters
-        components.queryItems = allParameters.map { URLQueryItem(name: $0, value: $1)}
+        components.queryItems = parameters.map { URLQueryItem(name: $0, value: $1)}
         
-        let url = components.url!
-        print(url)
+        return components.url!
     }
 }
