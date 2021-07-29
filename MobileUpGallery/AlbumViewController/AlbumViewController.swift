@@ -13,7 +13,7 @@ class AlbumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parameters = ["filters": "post, photo"]
+        let parameters = ["album_ids": ""]
         networkService.request(path: API.photos, parameters: parameters, completion: { (data, error) in
             if let error = error {
                 print("error when receiving data: \(error)")
