@@ -29,6 +29,10 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     weak var delegate: AuthenticationServiceDelegate?
     
+    var token: String? {
+        return VKSdk.accessToken()?.accessToken
+    }
+    
     func wakeUpSession() {
         let scope = ["email"]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in

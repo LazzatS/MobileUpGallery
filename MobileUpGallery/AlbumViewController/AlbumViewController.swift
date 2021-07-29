@@ -9,8 +9,10 @@ import UIKit
 
 class AlbumViewController: UIViewController {
 
+    private let networkService = NetworkService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        networkService.getPhotos()
     }
 }
