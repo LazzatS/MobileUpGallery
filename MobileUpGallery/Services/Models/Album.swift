@@ -18,7 +18,7 @@ struct Album: Decodable {
 struct AlbumInfo: Decodable {
 //    let ownerId: String
 //    let albumId: String
-    let date: Date?
+    let date: Double
     let sizes: [PhotoInfo]
 }
 
