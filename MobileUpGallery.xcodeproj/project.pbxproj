@@ -15,6 +15,7 @@
 		1248B62026B0AB140081AEF7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */; };
 		12B254A226B300E4004F53C6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B254A126B300E4004F53C6 /* NetworkService.swift */; };
 		12B254A426B301B4004F53C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B254A326B301B4004F53C6 /* API.swift */; };
+		12B254A726B34AC3004F53C6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B254A626B34AC3004F53C6 /* Album.swift */; };
 		12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA126B01CF300B3E33D /* AppDelegate.swift */; };
 		12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA326B01CF300B3E33D /* SceneDelegate.swift */; };
 		12B76FAB26B01CFF00B3E33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAA26B01CFF00B3E33D /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		1248B61326B0A0420081AEF7 /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
 		12B254A126B300E4004F53C6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		12B254A326B301B4004F53C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		12B254A626B34AC3004F53C6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		12B76F9E26B01CF300B3E33D /* MobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B76FA126B01CF300B3E33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B76FA326B01CF300B3E33D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		1206BF3226B1CCBE00BB5F92 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				12B254A526B34A8F004F53C6 /* Models */,
 				1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */,
 				12B254A126B300E4004F53C6 /* NetworkService.swift */,
 				12B254A326B301B4004F53C6 /* API.swift */,
@@ -94,6 +97,14 @@
 				12B76FC726B0248C00B3E33D /* LoginViewController.xib */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		12B254A526B34A8F004F53C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12B254A626B34AC3004F53C6 /* Album.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		12B76F9526B01CF300B3E33D = {
@@ -239,6 +250,7 @@
 				12B254A226B300E4004F53C6 /* NetworkService.swift in Sources */,
 				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
 				12B254A426B301B4004F53C6 /* API.swift in Sources */,
+				12B254A726B34AC3004F53C6 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
