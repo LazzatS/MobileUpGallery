@@ -28,7 +28,7 @@ final class NetworkService: Networking {
         let request = URLRequest(url: url)
         let task = createDataTask(from: request, completion: completion)
         task.resume()
-        print(url)
+        print("--> URL is \(url)")
     }
     
     private func createDataTask(from request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
@@ -47,7 +47,7 @@ final class NetworkService: Networking {
         // website for request
         components.host = API.host
         // needed method
-        components.path = API.photos
+        components.path = API.albums
         // arrange order of parameters
         components.queryItems = parameters.map { URLQueryItem(name: $0, value: $1)}
         

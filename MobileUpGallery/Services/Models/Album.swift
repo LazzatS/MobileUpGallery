@@ -16,5 +16,14 @@ struct Album: Decodable {
 }
 
 struct AlbumInfo: Decodable {
-    var title: String?
+//    let ownerId: String
+//    let albumId: String
+    let date: Date?
+    let sizes: [PhotoInfo]
+}
+
+struct PhotoInfo: Decodable {
+    let url: String
+    let height: Int
+    let width: Int
 }

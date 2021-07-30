@@ -9,27 +9,16 @@ import UIKit
 
 class AlbumViewController: UIViewController {
 
-    private let networkService: Networking = NetworkService()
+    private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parameters = ["album_ids": ""]
-        networkService.request(path: API.photos, parameters: parameters, completion: { (data, error) in
-            if let error = error {
-                print("error while receiving data: \(error.localizedDescription)")
+        
+        fetcher.getResponse { (response) in
+            guard let response = response else { return }
+            response.items.map { (item) in
+                print(item.date)
             }
-            
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            guard let data = data else { return }
-//            let json = try? JSONSerialization.jsonObject(with: data, options: [])
-//            print("json: \(String(describing: json))")
-            let response = try? decoder.decode(Response.self, from: data)
-            print(response)
-            response?.response.items.map({ (albumItem) in
-                print(albumItem.title)
-            })
-        })
+        }
     }
 }

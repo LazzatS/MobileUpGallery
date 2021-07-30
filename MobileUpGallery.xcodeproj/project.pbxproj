@@ -22,6 +22,7 @@
 		12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */; };
 		12B76FC826B0248C00B3E33D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FC626B0248C00B3E33D /* LoginViewController.swift */; };
 		12B76FC926B0248C00B3E33D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FC726B0248C00B3E33D /* LoginViewController.xib */; };
+		12DB3D3826B3F1B100669D49 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB3D3726B3F1B100669D49 /* NetworkDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		12B76FC626B0248C00B3E33D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12B76FC726B0248C00B3E33D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		12C6B5C126B08DEF0021AE0D /* MobileUpGallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileUpGallery-Bridging-Header.h"; sourceTree = "<group>"; };
+		12DB3D3726B3F1B100669D49 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				12B254A526B34A8F004F53C6 /* Models */,
+				12B254A326B301B4004F53C6 /* API.swift */,
 				1206BF3026B1CC9E00BB5F92 /* AuthenticationService.swift */,
 				12B254A126B300E4004F53C6 /* NetworkService.swift */,
-				12B254A326B301B4004F53C6 /* API.swift */,
+				12DB3D3726B3F1B100669D49 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */,
 				12B254A226B300E4004F53C6 /* NetworkService.swift in Sources */,
 				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
+				12DB3D3826B3F1B100669D49 /* NetworkDataFetcher.swift in Sources */,
 				12B254A426B301B4004F53C6 /* API.swift in Sources */,
 				12B254A726B34AC3004F53C6 /* Album.swift in Sources */,
 			);
