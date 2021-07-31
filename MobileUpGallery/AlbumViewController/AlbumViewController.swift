@@ -43,9 +43,9 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         delegate?.didChoosePhoto(urlString: photoLinks[indexPath.row], date: photoDates[indexPath.row])
-        print("tapped date: \(photoDates[indexPath.row]) AND url \(photoLinks[indexPath.row])")
-        
         let photoVC = PhotoViewController()
+        photoVC.photoImageURL = photoLinks[indexPath.row]
+        photoVC.photoImageDate = photoDates[indexPath.row]
         navigationController?.pushViewController(photoVC, animated: true)
     }
     
@@ -55,7 +55,6 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as! AlbumCollectionViewCell
-        
         fetcher.getResponse { (response) in
             guard let response = response else { return }
             for item in response.items {
