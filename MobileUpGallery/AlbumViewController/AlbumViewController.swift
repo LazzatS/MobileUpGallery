@@ -30,23 +30,38 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(AlbumCollectionViewCell.nib(), forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
-        
-        fetcher.getResponse { (response) in
-            guard let response = response else { return }
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
+        // navigate to new vc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 17
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as! AlbumCollectionViewCell
+        
+        fetcher.getResponse { (response) in
+            guard let response = response else { return }
+            for item in response.items {
+                self.photos = item.sizes
+                for x in 0..<self.photos.count {
+                    let photo = self.photos[x]
+                    if photo.type == "z" {
+                        let urlString = photo.url
+                        self.photoLinks.append(urlString)
+                    }
+                }
+                let date = Date(timeIntervalSince1970: item.date)
+                let dateTitle = self.dateFormatter.string(from: date)
+                self.photoDates.append(dateTitle)
+            }
+            cell.imageView.downloaded(from: self.photoLinks[indexPath.row])
+        }
+        
         return cell
     }
     

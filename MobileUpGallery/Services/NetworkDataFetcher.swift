@@ -28,7 +28,6 @@ struct NetworkDataFetcher: DataFetcher {
             }
             let decoded = self.decodeJSON(type: Response.self, from: data)
             response(decoded?.response)
-            print("response : \(String(describing: response))")
         }
     }
     
