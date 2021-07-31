@@ -8,9 +8,14 @@
 import UIKit
 import VKSdkFramework
 
+protocol PhotoSelectionDelegate {
+    func didChoosePhoto(urlString: String, date: String)
+}
+
 class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
+    var delegate: PhotoSelectionDelegate?
     
     let dateFormatter: DateFormatter = {
         let dt = DateFormatter()
@@ -37,7 +42,11 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        // navigate to new vc
+        delegate?.didChoosePhoto(urlString: photoLinks[indexPath.row], date: photoDates[indexPath.row])
+        print("tapped date: \(photoDates[indexPath.row]) AND url \(photoLinks[indexPath.row])")
+        
+        let photoVC = PhotoViewController()
+        navigationController?.pushViewController(photoVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
