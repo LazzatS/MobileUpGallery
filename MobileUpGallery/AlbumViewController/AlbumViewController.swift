@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import VKSdkFramework
 
 class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -26,6 +27,8 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createNavBarItems()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -73,6 +76,31 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         let sideSize: CGFloat = (collectionView.frame.size.width - spacing) / 2.0
         return CGSize(width: sideSize, height: sideSize)
     }
+    
+    func createNavBarItems() {
+        let albumTitle = UILabel()
+        albumTitle.font = UIFont(name: "SF Pro Display", size: 18)
+        albumTitle.tintColor = UIColor(named: "CustomBlack")
+        albumTitle.text = "Mobile Up Gallery"
+        self.title = albumTitle.text
+        
+        let rightExitButtonTitle = UILabel()
+        rightExitButtonTitle.font = UIFont(name: "SF Pro Display", size: 18)
+        rightExitButtonTitle.textColor = UIColor(named: "CustomBlack")
+        rightExitButtonTitle.text = "Выход"
+        
+        let navigationRightButton = UIBarButtonItem(title: rightExitButtonTitle.text, style: .plain, target: self, action: #selector(exitVK))
+        navigationRightButton.tintColor = UIColor(named: "CustomBlack")
+        
+        self.navigationItem.rightBarButtonItem = navigationRightButton
+    }
+    
+    @objc func exitVK(sender: UIBarButtonItem) {
+        VKSdk.forceLogout()
+        let loginVC = LoginViewController()
+        navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
 }
 
 extension UIImageView {
