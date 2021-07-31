@@ -18,10 +18,12 @@
 		12B254A726B34AC3004F53C6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B254A626B34AC3004F53C6 /* Album.swift */; };
 		12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA126B01CF300B3E33D /* AppDelegate.swift */; };
 		12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA326B01CF300B3E33D /* SceneDelegate.swift */; };
-		12B76FAB26B01CFF00B3E33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAA26B01CFF00B3E33D /* Assets.xcassets */; };
 		12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */; };
 		12B76FC826B0248C00B3E33D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FC626B0248C00B3E33D /* LoginViewController.swift */; };
 		12B76FC926B0248C00B3E33D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FC726B0248C00B3E33D /* LoginViewController.xib */; };
+		12C2BD5D26B497550052C8EC /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2BD5B26B497550052C8EC /* AlbumCollectionViewCell.swift */; };
+		12C2BD5E26B497550052C8EC /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C2BD5C26B497550052C8EC /* AlbumCollectionViewCell.xib */; };
+		12C2BD6026B55B400052C8EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12C2BD5F26B55B3F0052C8EC /* Assets.xcassets */; };
 		12DB3D3826B3F1B100669D49 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB3D3726B3F1B100669D49 /* NetworkDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +52,13 @@
 		12B76F9E26B01CF300B3E33D /* MobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B76FA126B01CF300B3E33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B76FA326B01CF300B3E33D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12B76FAA26B01CFF00B3E33D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B76FAD26B01CFF00B3E33D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12B76FAF26B01CFF00B3E33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12B76FC626B0248C00B3E33D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12B76FC726B0248C00B3E33D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		12C2BD5B26B497550052C8EC /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		12C2BD5C26B497550052C8EC /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		12C2BD5F26B55B3F0052C8EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12C6B5C126B08DEF0021AE0D /* MobileUpGallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileUpGallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		12DB3D3726B3F1B100669D49 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,8 @@
 			children = (
 				1206BF3326B20B4A00BB5F92 /* AlbumViewController.swift */,
 				1206BF3426B20B4A00BB5F92 /* AlbumViewController.xib */,
+				12C2BD5B26B497550052C8EC /* AlbumCollectionViewCell.swift */,
+				12C2BD5C26B497550052C8EC /* AlbumCollectionViewCell.xib */,
 			);
 			path = AlbumViewController;
 			sourceTree = "<group>";
@@ -135,10 +141,10 @@
 				1206BF3826B20C6800BB5F92 /* LoginViewController */,
 				1206BF3726B20C3A00BB5F92 /* AlbumViewController */,
 				1206BF3226B1CCBE00BB5F92 /* Services */,
-				12B76FAA26B01CFF00B3E33D /* Assets.xcassets */,
 				12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */,
 				12B76FAF26B01CFF00B3E33D /* Info.plist */,
 				12C6B5C126B08DEF0021AE0D /* MobileUpGallery-Bridging-Header.h */,
+				12C2BD5F26B55B3F0052C8EC /* Assets.xcassets */,
 			);
 			path = MobileUpGallery;
 			sourceTree = "<group>";
@@ -213,8 +219,9 @@
 			files = (
 				1206BF3626B20B4A00BB5F92 /* AlbumViewController.xib in Resources */,
 				12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */,
-				12B76FAB26B01CFF00B3E33D /* Assets.xcassets in Resources */,
+				12C2BD5E26B497550052C8EC /* AlbumCollectionViewCell.xib in Resources */,
 				12B76FC926B0248C00B3E33D /* LoginViewController.xib in Resources */,
+				12C2BD6026B55B400052C8EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +257,7 @@
 				1206BF3526B20B4A00BB5F92 /* AlbumViewController.swift in Sources */,
 				12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */,
 				12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */,
+				12C2BD5D26B497550052C8EC /* AlbumCollectionViewCell.swift in Sources */,
 				12B254A226B300E4004F53C6 /* NetworkService.swift in Sources */,
 				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
 				12DB3D3826B3F1B100669D49 /* NetworkDataFetcher.swift in Sources */,

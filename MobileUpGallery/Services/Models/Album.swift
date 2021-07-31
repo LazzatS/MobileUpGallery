@@ -24,6 +24,5 @@ struct AlbumInfo: Decodable {
 
 struct PhotoInfo: Decodable {
     let url: String
-    let height: Int
-    let width: Int
+    var type: String
 }
