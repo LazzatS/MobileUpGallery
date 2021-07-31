@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="MobileUpGallery" customModuleProvider="target">
             <connections>
-                <outlet property="photoView" destination="cnf-Xc-SAH" id="5LE-pb-iGh"/>
+                <outlet property="photoCollectionView" destination="yGC-Pf-ing" id="JwE-rZ-ei3"/>
+                <outlet property="photoView" destination="XES-je-bnS" id="D5R-Qh-iS1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,15 +21,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-Xc-SAH">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XES-je-bnS">
                     <rect key="frame" x="0.0" y="241" width="414" height="414"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XES-je-bnS" secondAttribute="height" multiplier="1:1" id="0E6-Mp-FoG"/>
+                    </constraints>
                 </imageView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lED-Ls-s3D">
-                    <rect key="frame" x="0.0" y="738" width="414" height="85"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yGC-Pf-ing">
+                    <rect key="frame" x="0.0" y="772" width="414" height="56"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zeC-kl-EDb">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="yAd-KX-ong"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="koy-u9-8BM">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,6 +43,15 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yGC-Pf-ing" secondAttribute="bottom" constant="34" id="Nro-Va-vgs"/>
+                <constraint firstItem="XES-je-bnS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="PSv-Fx-q8Z"/>
+                <constraint firstItem="XES-je-bnS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ThZ-QR-o6h"/>
+                <constraint firstItem="XES-je-bnS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dVX-Wr-dyj"/>
+                <constraint firstItem="yGC-Pf-ing" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="e6S-YQ-rou"/>
+                <constraint firstItem="XES-je-bnS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="i9D-Ff-99H"/>
+                <constraint firstItem="yGC-Pf-ing" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sG8-vO-zhZ"/>
+            </constraints>
             <point key="canvasLocation" x="79.710144927536234" y="62.946428571428569"/>
         </view>
     </objects>

@@ -46,6 +46,7 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         let photoVC = PhotoViewController()
         photoVC.photoImageURL = photoLinks[indexPath.row]
         photoVC.photoImageDate = photoDates[indexPath.row]
+        photoVC.dateFormatter = dateFormatter
         navigationController?.pushViewController(photoVC, animated: true)
     }
     

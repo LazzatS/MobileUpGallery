@@ -18,6 +18,8 @@
 		12B254A726B34AC3004F53C6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B254A626B34AC3004F53C6 /* Album.swift */; };
 		12B3B68126B5A73C0075B1EC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3B67F26B5A73C0075B1EC /* PhotoViewController.swift */; };
 		12B3B68226B5A73C0075B1EC /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B3B68026B5A73C0075B1EC /* PhotoViewController.xib */; };
+		12B3B68626B5D6990075B1EC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3B68426B5D6990075B1EC /* PhotoCollectionViewCell.swift */; };
+		12B3B68726B5D6990075B1EC /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B3B68526B5D6990075B1EC /* PhotoCollectionViewCell.xib */; };
 		12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA126B01CF300B3E33D /* AppDelegate.swift */; };
 		12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B76FA326B01CF300B3E33D /* SceneDelegate.swift */; };
 		12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B76FAC26B01CFF00B3E33D /* LaunchScreen.storyboard */; };
@@ -53,6 +55,8 @@
 		12B254A626B34AC3004F53C6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		12B3B67F26B5A73C0075B1EC /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		12B3B68026B5A73C0075B1EC /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		12B3B68426B5D6990075B1EC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		12B3B68526B5D6990075B1EC /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		12B76F9E26B01CF300B3E33D /* MobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B76FA126B01CF300B3E33D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B76FA326B01CF300B3E33D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				12B3B67F26B5A73C0075B1EC /* PhotoViewController.swift */,
 				12B3B68026B5A73C0075B1EC /* PhotoViewController.xib */,
+				12B3B68426B5D6990075B1EC /* PhotoCollectionViewCell.swift */,
+				12B3B68526B5D6990075B1EC /* PhotoCollectionViewCell.xib */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				12B76FAE26B01CFF00B3E33D /* LaunchScreen.storyboard in Resources */,
 				12C2BD5E26B497550052C8EC /* AlbumCollectionViewCell.xib in Resources */,
 				12B3B68226B5A73C0075B1EC /* PhotoViewController.xib in Resources */,
+				12B3B68726B5D6990075B1EC /* PhotoCollectionViewCell.xib in Resources */,
 				12B76FC926B0248C00B3E33D /* LoginViewController.xib in Resources */,
 				12C2BD6026B55B400052C8EC /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +280,7 @@
 				12B76FA226B01CF300B3E33D /* AppDelegate.swift in Sources */,
 				12B76FA426B01CF300B3E33D /* SceneDelegate.swift in Sources */,
 				12C2BD5D26B497550052C8EC /* AlbumCollectionViewCell.swift in Sources */,
+				12B3B68626B5D6990075B1EC /* PhotoCollectionViewCell.swift in Sources */,
 				12B254A226B300E4004F53C6 /* NetworkService.swift in Sources */,
 				1206BF3126B1CC9E00BB5F92 /* AuthenticationService.swift in Sources */,
 				12DB3D3826B3F1B100669D49 /* NetworkDataFetcher.swift in Sources */,
