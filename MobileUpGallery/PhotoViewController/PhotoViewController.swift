@@ -7,6 +7,15 @@
 
 import UIKit
 
+class ImageSaver: NSObject {
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
+    }
+
+    @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+    }
+}
+
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
@@ -25,7 +34,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         photoView.downloaded(from: photoImageURL!)
         self.title = photoImageDate
-
+        createNavBarItems()
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         photoCollectionView.register(PhotoCollectionViewCell.nib(), forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
@@ -74,5 +83,23 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 
         let sideSize: CGFloat = 56
         return CGSize(width: sideSize, height: sideSize)
+    }
+    
+    func createNavBarItems() {
+        
+        let rightShareButtonImage = UIImage(systemName: "square.and.arrow.up")
+        let navigationRightButton = UIBarButtonItem(image: rightShareButtonImage, style: .plain, target: self, action: #selector(save))
+        navigationRightButton.tintColor = UIColor(named: "CustomBlack")
+        self.navigationItem.rightBarButtonItem = navigationRightButton
+    }
+    
+    @objc func save() {
+        let items: [Any] = [UIImage()]
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+
+        guard let image = photoView.image else { return }
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhotoAlbum(image: image)
     }
 }
