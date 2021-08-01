@@ -91,14 +91,17 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         UINavigationBar.appearance().titleTextAttributes = navAttributes as [NSAttributedString.Key : Any]
         self.navigationController?.navigationBar.tintColor = UIColor(named: "CustomBlack")
         
-        let customBackBarButton = UIBarButtonItem(image: UIImage(named: "custom-back-button"), style: .plain, target: self, action: nil)
-        self.navigationItem.setLeftBarButton(customBackBarButton, animated: true)
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
         
         let rightShareButtonImage = UIImage(systemName: "square.and.arrow.up")
         let navigationRightButton = UIBarButtonItem(image: rightShareButtonImage, style: .plain, target: self, action: #selector(save))
         navigationRightButton.tintColor = UIColor(named: "CustomBlack")
         self.navigationItem.rightBarButtonItem = navigationRightButton
+        
+        let customBackBarButton = UIBarButtonItem(image: UIImage(named: "custom-back-button")!, style: .done, target: self, action: #selector(moveBack))
+        self.navigationItem.setLeftBarButton(customBackBarButton, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
     }
     
     @objc func save() {
@@ -117,4 +120,9 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @objc func moveBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
