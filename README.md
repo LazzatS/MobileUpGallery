@@ -19,3 +19,7 @@ import VKSdkFramework
 #### [Demo](https://youtu.be/wAP-63EEODw)
 
 ![Logo](https://sun9-47.userapi.com/impf/c604620/v604620667/6e39/JNrCTtGkp8s.jpg?size=200x200&quality=96&sign=c5c9f547df334a9ce301625a603ca607&type=album)
+
+## Что будет доработано
+- UIPinchGestureRecognizer для увеличения фото
+- URLCache для кэширования фото
