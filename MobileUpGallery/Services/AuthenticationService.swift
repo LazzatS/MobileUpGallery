@@ -39,10 +39,10 @@ class AuthenticationService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
             switch state {
             
             case .initialized:
-                print("initialized and ready to be authorized")
+                // initialized and ready to be authorized
                 VKSdk.authorize(scope)
             case .authorized:
-                print("authorized and should present web view to sign in")
+                // authorized and should present web view to sign in
                 delegate?.authenticationServiceSignIn()
             default:
                 delegate?.authenticationSignInFailed()

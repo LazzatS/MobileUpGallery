@@ -28,9 +28,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthenticationServiceDe
         window?.windowScene = windowScene
         authenticationService = AuthenticationService()
         authenticationService.delegate = self
-        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        let nav = UINavigationController(rootViewController: loginVC)
-        window?.rootViewController = nav
+        if !VKSdk.initialized() {
+            let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            let nav = UINavigationController(rootViewController: loginVC)
+            window?.rootViewController = nav
+        } else {
+            authenticationService.wakeUpSession()
+            let albumVC = AlbumViewController(nibName: "AlbumViewController", bundle: nil)
+            let nav = UINavigationController(rootViewController: albumVC)
+            window?.rootViewController = nav
+        }
         window?.makeKeyAndVisible()
     }
 
