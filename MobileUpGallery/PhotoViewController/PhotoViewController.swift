@@ -16,7 +16,7 @@ class ImageSaver: NSObject {
     }
 }
 
-class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
 
     private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
     
@@ -86,6 +86,14 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func createNavBarItems() {
+        
+        let navAttributes = [NSAttributedString.Key.font: UIFont(name: "SF Pro Display", size: 18)]
+        UINavigationBar.appearance().titleTextAttributes = navAttributes as [NSAttributedString.Key : Any]
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "CustomBlack")
+        
+        let customBackBarButton = UIBarButtonItem(image: UIImage(named: "custom-back-button"), style: .plain, target: self, action: nil)
+        self.navigationItem.setLeftBarButton(customBackBarButton, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         let rightShareButtonImage = UIImage(systemName: "square.and.arrow.up")
         let navigationRightButton = UIBarButtonItem(image: rightShareButtonImage, style: .plain, target: self, action: #selector(save))
