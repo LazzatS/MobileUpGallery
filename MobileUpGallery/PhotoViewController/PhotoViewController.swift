@@ -96,10 +96,17 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     @objc func save() {
         let items: [Any] = [UIImage()]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        self.present(activityVC, animated: true, completion: nil)
 
         guard let image = photoView.image else { return }
         let imageSaver = ImageSaver()
         imageSaver.writeToPhotoAlbum(image: image)
+        showAlert()
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Успех", message: "Вы сохранили фото.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
